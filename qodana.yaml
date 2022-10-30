@@ -1,0 +1,12 @@
+version: "1.0"
+linter: jetbrains/qodana-php:2022.2-eap
+exclude:
+  - name: All
+    paths:
+      - .github
+      - vendor
+      - assets/dist
+      - docs
+      - lando
+      - node_modules
+      - wordpress

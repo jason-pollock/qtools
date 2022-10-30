@@ -1,0 +1,10 @@
+includes:
+    - /Users/jason.pollock/.composer/vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: 5
+    paths:
+        - %currentWorkingDirectory%/src/
+    ignoreErrors:
+        - 
+            messages: 
+                - "#^Variable [.][a-zA-Z] might not be defined.$#"
