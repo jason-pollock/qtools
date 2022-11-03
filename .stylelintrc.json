@@ -1,3 +1,22 @@
 {
-    "extends": "stylelint-config-standard"
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": [
+        "assets/src/sass/generic/_normalize.scss"
+    ],
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "indentation": [
+            4,
+            {
+                "message": "4 spaces indentation"
+            }
+        ],
+        "no-invalid-position-at-import-rule": null,
+        "no-descending-specificity": null,
+        "at-rule-no-unknown": null,
+        "comment-whitespace-inside": null,
+        "no-duplicate-selectors": null
+    }
 }
