@@ -4,8 +4,8 @@ grumphp:
     phpmd:
       ruleset: ['phpmd.xml']
     phpcs: ~
-    # phpstan:
-    #   level: 5
+    phpstan:
+      level: 5
     # phpspec:
     #   format: progress
     #   verbose: true

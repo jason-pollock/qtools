@@ -1,18 +1,41 @@
 <?xml version="1.0"?>
-<psalm errorLevel="3" resolveFromConfigFile="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://getpsalm.org/schema/config" xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd">
+<psalm
+    errorLevel="8"
+    phpVersion="7.4"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
     <stubs>
-        <file name="~/jason.pollock/.composer/vendor/php-stubs/wordpress-stubs/wordpress-stubs.php" />
-        <file name="~/jason.pollock/.composer/vendor/php-stubs/acf-pro-stubs/wordpress-stubs.php" />
+        <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php" />
+        <file name="vendor/php-stubs/acf-pro-stubs/acf-pro-stubs.php" />
+        <file name="vendor/php-stubs/wordpress-globals/wordpress-globals.php" />
+        <file name="vendor/php-stubs/wp-cli-stubs/wp-cli-stubs.php" />
     </stubs>
     <projectFiles>
         <directory name="src" />
         <!-- <file name="init.php" /> -->
         <ignoreFiles>
             <directory name="vendor" />
+            <directory name="wordpress" />
+            <directory name="src/plugins/fool-wp-commerce/vendor" />
+            <directory name="src/plugins/fool-wp-commerce/wp-content" />
+            <directory name="src/plugins/fool-wp-tickers/vendor" />
+            <directory name="src/plugins/fool-wp-tickers/wordpress" />
+            <directory name="src/plugins/wp-admincustomizations-php/vendor" />
+            <directory name="src/plugins/wp-admincustomizations-php/wordpress" />
+            <!-- <directory name="src/plugins/wp-articletickerizer-php/vendor" /> -->
+            <!-- <directory name="src/plugins/wp-fooldisclosure-php/vendor" /> -->
+            <!-- <directory name="src/plugins/fool-wp-kevel/vendor" /> -->
+            <directory name="src/plugins/fool-wp-tickers/vendor" />
+            <directory name="src/themes/freesite-2020-theme/vendor" />
+            <directory name="src/themes/freesite-2020-theme/wordpress" />
+            <directory name="src/themes/freesite-2020-theme/scoped-build" />
         </ignoreFiles>
     </projectFiles>
     <plugins>
-        <pluginClass class="PsalmWordPress\Plugin" />
+        <!-- <pluginClass class="PsalmWordPress\Plugin" /> -->
     </plugins>
 </psalm>
 

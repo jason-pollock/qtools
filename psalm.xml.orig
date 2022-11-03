@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<psalm errorLevel="3" resolveFromConfigFile="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://getpsalm.org/schema/config" xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd">
+  <stubs>
+    <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php" />
+    <file name="vendor/php-stubs/acf-pro-stubs/wordpress-stubs.php" />
+    <file name="vendor/php-stubs/wordpress-globals/wordpress-globals.php" />
+    <file name="vendor/php-stubs/wp-cli-stubs/wp-cli-stubs.php" />
+  </stubs>
+  <projectFiles>
+    <directory name="plugins" />
+    <directory name="themes" />
+    <!-- <file name="init.php" /> -->
+    <ignoreFiles>
+      <directory name="vendor" />
+      <directory name="wordpress" />
+    </ignoreFiles>
+  </projectFiles>
+  <plugins>
+    <pluginClass class="PsalmWordPress\Plugin" />
+  </plugins>
+</psalm>
+

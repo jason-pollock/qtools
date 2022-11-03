@@ -1,9 +1,10 @@
 includes:
-    - /Users/jason.pollock/.composer/vendor/szepeviktor/phpstan-wordpress/extension.neon
+    - /vendor/szepeviktor/phpstan-wordpress/extension.neon
 parameters:
     level: 5
     paths:
-        - %currentWorkingDirectory%/src/
+        - /home/jason/Containers/fool/plugins/
+        - /home/jason/Containers/fool/themes/
     ignoreErrors:
         - 
             messages: 

@@ -10,3 +10,18 @@ exclude:
       - lando
       - node_modules
       - wordpress
+      - themes/freesite-2020-theme/vendor
+      - themes/freesite-2020-theme/wordpress
+      - themes/freesite-2020-theme/assets/dist
+      - themes/freesite-2020-theme/node_modules
+      - themes/freesite-2020-theme/docs
+      - themes/foolukmf-theme/vendor
+      - plugins/fool-wp-commerce/vendor
+      - plugins/fool-wp-commerce/wordpress
+      - plugins/fool-wp-commerce/node_modules
+      - plugins/wp-admincustomizations-php/vendor
+      - plugins/wp-admincustomizations-php/wordpress
+      - plugins/wp-articletickerizer-plugin/vendor
+      - plugins/wp-articletickerizer-plugin/wordpress
+      - plugins/wp-fooldisclosure-php/vendor
+      - plugins/wp-fooldisclosure-php/wordpress
