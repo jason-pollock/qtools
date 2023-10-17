@@ -28,11 +28,12 @@ return static function (RectorConfig $rectorConfig): void {
     // $rectorConfig->rule(AddReturnTypeDeclarationRector::class);
     // define sets of rules
     $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_74,
+        LevelSetList::UP_TO_PHP_82,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SetList::TYPE_DECLARATION,
         SetList::EARLY_RETURN,
+        SetList::DEAD_CODE,
     ]);
 
     $rectorConfig->importNames();
