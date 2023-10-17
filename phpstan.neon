@@ -6,7 +6,7 @@ parameters:
         - '#tags .* invalid syntax#'
         - '#Access to an undefined property .*(symbol|exchange|company_name)#'
     paths:
-        - src/
+        - packages/
     excludePaths:
         - */node_modules/*
     bootstrapFiles:
