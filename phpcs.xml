@@ -5,23 +5,21 @@
   <arg name="colors" />
   <arg name="parallel" value="75" />
   <arg value="np" />
+  <arg name="cache" value="~/.cache/phpcs/.phpcs-cache"/>
 
-  <file>/home/jason/Containers/fool/plugins</file>
-  <file>/home/jason/Containers/fool/themes</file>
+  <file>./packages</file>
+  <!-- <file>/home/jason/Containers/fool/themes</file> -->
 
-  <exclude-pattern>*.js</exclude-pattern>
-  <exclude-pattern>*.css</exclude-pattern>
-  <exclude-pattern>*/vendor/*</exclude-pattern>
-  <exclude-pattern>*/node_modules/*</exclude-pattern>
-  <exclude-pattern>*/wordpress/*</exclude-pattern>
+  <exclude-pattern>*.{js,css}</exclude-pattern>
+  <exclude-pattern>*/{vendor,node_modules,wordpress,scoped-build}/*</exclude-pattern>
+
+  <rule ref="PSR12" />
 
   <rule ref="Internal.Tokenizer.Exception">
     <type>error</type>
   </rule>
 
-  <rule ref="PSR1"></rule>
-  <rule ref="PSR12"></rule>
-
+  <!-- Generic Rules -->
   <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
   <rule ref="Generic.Classes.DuplicateClassName" />
   <rule ref="Generic.CodeAnalysis.EmptyStatement" />
@@ -55,6 +53,8 @@
   <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
   <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing" />
   <rule ref="Generic.WhiteSpace.ScopeIndent" />
+
+  <!-- Pear Rules -->
   <rule ref="PEAR.Classes.ClassDeclaration" />
   <rule ref="PEAR.ControlStructures.ControlSignature" />
   <rule ref="PEAR.Formatting.MultiLineAssignment" />
@@ -89,6 +89,7 @@
   <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
   <rule ref="PEAR.WhiteSpace.ScopeIndent" />
 
+  <!-- Squiz Rules -->
   <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
   <rule ref="Squiz.Arrays.ArrayDeclaration" />
   <rule ref="Squiz.Commenting.BlockComment" />
@@ -173,4 +174,6 @@
       </property>
     </properties>
   </rule>
+
 </ruleset>
+
