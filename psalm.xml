@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <psalm
-    errorLevel="8"
-    phpVersion="7.4"
+    errorLevel="6"
+    phpVersion="8.2"
     resolveFromConfigFile="true"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
@@ -14,28 +14,17 @@
         <file name="vendor/php-stubs/wp-cli-stubs/wp-cli-stubs.php" />
     </stubs>
     <projectFiles>
-        <directory name="src" />
+        <directory name="packages" />
         <!-- <file name="init.php" /> -->
-        <ignoreFiles>
-            <directory name="vendor" />
-            <directory name="wordpress" />
-            <directory name="src/plugins/fool-wp-commerce/vendor" />
-            <directory name="src/plugins/fool-wp-commerce/wp-content" />
-            <directory name="src/plugins/fool-wp-tickers/vendor" />
-            <directory name="src/plugins/fool-wp-tickers/wordpress" />
-            <directory name="src/plugins/wp-admincustomizations-php/vendor" />
-            <directory name="src/plugins/wp-admincustomizations-php/wordpress" />
-            <!-- <directory name="src/plugins/wp-articletickerizer-php/vendor" /> -->
-            <!-- <directory name="src/plugins/wp-fooldisclosure-php/vendor" /> -->
-            <!-- <directory name="src/plugins/fool-wp-kevel/vendor" /> -->
-            <directory name="src/plugins/fool-wp-tickers/vendor" />
-            <directory name="src/themes/freesite-2020-theme/vendor" />
-            <directory name="src/themes/freesite-2020-theme/wordpress" />
-            <directory name="src/themes/freesite-2020-theme/scoped-build" />
+        <!-- See https://psalm.dev/docs/running_psalm/configuration/#projectfiles -->
+        <ignoreFiles allowMissingFiles="true">
+            <directory name="packages/*/vendor" />
+            <directory name="packages/*/wordpress" />
+            <directory name="packages/*/scoped-build" />
         </ignoreFiles>
     </projectFiles>
     <plugins>
-        <!-- <pluginClass class="PsalmWordPress\Plugin" /> -->
+        <pluginClass class="PsalmWordPress\Plugin" />
     </plugins>
 </psalm>
 
