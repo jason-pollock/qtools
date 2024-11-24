@@ -18,7 +18,7 @@
         "johnbillion/wp-hooks": "^1.2",
         "wp-hooks/wordpress-core": "^1.2",
         "friendsofphp/php-cs-fixer": "^3.12",
-        "vimeo/psalm": "^4.29",
+        "vimeo/psalm": "^5.0",
         "phpstan/phpstan": "^1.8",
         "symplify/easy-coding-standard": "^12.0"
     },
